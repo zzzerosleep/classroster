@@ -16,7 +16,7 @@ import java.util.List;
 @Repository
 public class TeacherDaoDB implements TeacherDao {
     @Autowired
-    static JdbcTemplate jdbc;
+    JdbcTemplate jdbc;
 
     @Override
     public Teacher getTeacherById(int id) {
@@ -67,7 +67,7 @@ public class TeacherDaoDB implements TeacherDao {
         final String DELETE_COURSE = "DELETE FROM course WHERE teacherId = ?";
         jdbc.update(DELETE_COURSE, id);
 
-        final String DELETE_TEACHER = "DELETE teacher WHERE id = ?";
+        final String DELETE_TEACHER = "DELETE FROM teacher WHERE id = ?";
         jdbc.update(DELETE_TEACHER, id);
     }
 
