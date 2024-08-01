@@ -1,6 +1,7 @@
 package Com.sg.classroster.entity;
 import java.util.Objects;
 
+
 public class Teacher {
     private int id;
     private String firstName;
